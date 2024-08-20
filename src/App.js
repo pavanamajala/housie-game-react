@@ -68,7 +68,7 @@ function App() {
               {Array.from({ length: 90 }, (_, index) => numberRow(index + 1))}
             </div>
             <div className="number-display-container">
-              {selectedNum.slice(selectedNum.length - 6, -1)?.map(item => (
+              {selectedNum.slice(Math.max(selectedNum?.length - 6, 0), -1)?.map(item => (
                 <div key={item} className="number-display">{item}</div>
               ))}
             </div>
